@@ -15,26 +15,26 @@ class TransaksiFatClient extends Model
 
     public function userFtth()
     {
-        return $this->belongsTo(UserFtth::class, 'id_user_ftth', 'id_user_ftth');
+        return $this->belongsTo(userftth::class, 'id_user_ftth', 'id_user_ftth');
     }
 
     public function olt()
     {
-        return $this->belongsTo(Olt::class, 'id_olt');
+        return $this->belongsTo(olt::class, 'id_olt');
     }
 
     public function odc()
     {
-        return $this->belongsTo(Odc::class, 'id_odc');
+        return $this->belongsTo(odc::class, 'id_odc');
     }
 
     public function fat()
     {
-        return $this->belongsTo(Fat::class, 'id_fat');
+        return $this->belongsTo(fat::class, 'id_fat');
     }
 
     public function odp()
     {
-        return $this->belongsTo(Odp::class, 'id_odp');
+        return $this->belongsTo(odp::class, 'id_odp');
     }
 }

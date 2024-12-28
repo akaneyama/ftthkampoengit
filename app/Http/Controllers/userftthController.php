@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UserFtth;
+use App\Models\userftth;
 use Illuminate\Http\Request;
 
 class userftthController extends Controller
@@ -10,7 +10,7 @@ class userftthController extends Controller
     public function index(Request $request)
     {
         $search = $request->input('search');
-        $userftth = UserFtth::query()
+        $userftth = userftth::query()
             ->when($search, function ($query, $search) {
                 $query->where('nama_user_ftth', 'like', '%' . $search . '%')
                     ->orWhere('ip_address', 'like', '%' . $search . '%')

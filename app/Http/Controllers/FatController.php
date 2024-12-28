@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\userftth;
 use Illuminate\Http\Request;
-use App\Models\Fat;
-use App\Models\Odc;
-use App\Models\Olt;
+use App\Models\fat;
+use App\Models\odc;
+use App\Models\olt;
 use App\Models\odp;
 use App\Models\TransaksiFatClient;
 
@@ -43,10 +43,10 @@ class FatController extends Controller
             ->paginate(10);
 
         // Data untuk combobox
-        $fats = Fat::all();
-        $olts = Olt::all();
-        $odcs = Odc::all();
-        $odps = Odp::all();
+        $fats = fat::all();
+        $olts = olt::all();
+        $odcs = odc::all();
+        $odps = odp::all();
 
         // Total user info
         $totalUser = TransaksiFatClient::when($fatId, function ($query, $fatId) {
