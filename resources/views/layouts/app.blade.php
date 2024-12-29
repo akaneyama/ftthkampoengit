@@ -60,14 +60,16 @@
             @if (Route::currentRouteName() == 'ftth.index')
             <div class="d-flex">
                 <a href="{{ route('ftth.index') }}" class="btn btn-outline-light me-2">User</a>
-                <a href="{{ route('fat.index') }}" class="btn btn-outline-light">Fat</a>
+                <a href="{{ route('fat.index') }}" class="btn btn-outline-light me-2">Fat</a>
+		<a href="{{ url('/admin') }}" class="btn btn-outline-light">Log</a>
             </div>
             @endif
 
             @if (Route::currentRouteName() == 'fat.index')
             <div class="d-flex">
                 <a href="{{ route('ftth.index') }}" class="btn btn-outline-light me-2">User</a>
-                <a href="{{ route('fat.index') }}" class="btn btn-outline-light">Fat</a>
+                <a href="{{ route('fat.index') }}" class="btn btn-outline-light me-2">Fat</a>
+		<a href="{{ url('/admin') }}" class="btn btn-outline-light">Log</a>
             </div>
             @endif
         </div>
